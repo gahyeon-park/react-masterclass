@@ -4,29 +4,22 @@ const Father = styled.div`
   display: flex;
 `;
 
-const BoxOne = styled.div`
-  background-color: teal;
+const Box = styled.div`
+  background-color: ${props => props.bgColor};
   width: 100px;
   height: 100px;
 `;
 
-const BoxTwo = styled.div`
-  background-color: tomato;
-  width: 100px;
-  height: 100px;
-`;
-
-const Text = styled.span`
-  color: white
+// styled(Box): Box 컴포넌트의 모든 속성을 상속받는 Circle 컴포넌트 + 추가로 스타일을 더하면서 확장
+const Circle = styled(Box)`
+  border-radius: 50px;
 `;
 
 function App() {
   return (
     <Father>
-      <BoxOne>
-        <Text>Hello</Text>
-      </BoxOne>
-      <BoxTwo></BoxTwo>
+      <Box bgColor="dodgerblue" />
+      <Circle bgColor="salmon" />
     </Father>
   )
 }
