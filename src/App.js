@@ -30,6 +30,7 @@ const Father = styled.div`
 //   background-color: skyblue;
 // `;
 
+// export const rotationAni = keyframes``; 으로 다른 컴포넌트에서 import해서 사용할 수도 있음.
 const rotationAni = keyframes`
   0% {
     transform: rotate(0deg);
