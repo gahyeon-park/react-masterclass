@@ -47,6 +47,11 @@ const rotationAni = keyframes`
   }
 `;
 
+const Emoji = styled.span`
+  font-size: 2rem;
+  transition: font-size .3s;
+`;
+
 const BoxB = styled.div`
   display: flex;
   justify-content: center;
@@ -56,22 +61,18 @@ const BoxB = styled.div`
   background-color: darkkhaki;
   animation: ${rotationAni} 2s linear infinite;
 
-  span {
-    font-size: 2rem;
-    transition: font-size .3s;
-
-    &:hover {
+  ${Emoji}:hover {
       font-size: 4rem;
     }
-  }
 `;
 
 function App() {
   return (
     <Father as="header">
       <BoxB>
-        <span>&#128516;</span>
+        <Emoji as="p">&#128516;</Emoji>
       </BoxB>
+      <Emoji>&#128150;</Emoji>
     </Father>
   )
 }
